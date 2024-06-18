@@ -17,6 +17,8 @@ foreach ($user in $users) {
     
   New-ADUser -Name "$firstName $lastName" -DisplayName "$firstName $lastName"  -SamAccountName $userName  -EmailAddress "$userName@example.com" -Path "OU=Your_OU_Name_here DC=example DC=com"  -AccountPassword $password -Enabled $true -Description $description -ChangePasswordAtLogon $true
 
+# Display a message when the user creation is completed.
+
   Write-Output "Created user: $userName"
     
 }
